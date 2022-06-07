@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #d5d5d5;
+}
+
+button {
+    padding: 2px 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background: #d5d5d5;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+button.active {
+    background: #eee;
+    
+}
+
+.warrap {
+    padding: 10px;
+}
+
+.warrap .select {
+    display: flex;
+}
+
+.warrap .select div {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.warrap .select div i {
+    margin-right: 5px;
+}
+
+.warrap .body {
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #dddddd;
+}
+
+.body .body-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .body-header .header-search {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.header-buttons {
+    position: relative;
+}
+/* Quang code */
+.header-buttons button {
+    color: white;
+    font-size: 70%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.header-buttons button i {
+    margin-right: 5px;
+}
+
+.header-buttons .popup {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background: #ededed;
+    border-radius: 2px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.header-buttons .popup > * {
+    margin: 5px ;
+}
+
+.header-buttons #sent.active ~ .popup {
+    display: flex;
+}
+
+
+.body .header-table,
+.body .body-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.body .header-table tr,
+.body .body-table tr {
+    display: grid;
+    grid-template-columns:0.5fr 1fr 1.5fr 3fr 1fr 1fr 0.6fr 0.6fr;
+    text-align: center;
+}
+
+.body .body-table tr:nth-child(odd) {
+    background: #eee;
+}
+
+.body .body-table tr.active {
+    background: #5555;
+}
+
+.body .header-table tr th,
+.body .header-table tr td {
+    border: 1px solid #333;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 2px 5px;  
+    margin-bottom: -10px; 
+    font-weight: 600;
+}
+
+.body .body-table tr th,
+.body .body-table tr td {
+    border: 1px solid #333;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 2px 5px;
+}
+
+.body-table button {
+    border: 1px solid #5d7ff0;
+    background: #ffffff;
+    color: #3c5bf1;
+    font-weight: 500;
+}
+
+.body {
+    position: relative;
+}
+
+.body .popup-edit {
+    display: none;
+    position: fixed;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    flex-direction: column;
+    padding: 20px;
+    background: #ededed;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+.body.active .popup-edit {
+    display: flex;
+}
+
+.body .filter {
+    display: flex;
+}
+
+.body .filter input {
+    width: 60px;
+}
+
+.body .filter .pagination {
+    display: flex;
+    margin: 0 10px;
+}
+
+.body .filter .pagination .pages {
+    margin: 0 10px;
+}
+
+.body .filter .pagination .pages button {
+    min-width: 20px;
+
+}

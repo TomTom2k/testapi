@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message manage</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="warrap">
+        <div class="select">
+            <div class="reception"><i class="fas fa-angle-down"></i>Reception</div>
+            <div class="sent"><i class="fas fa-angle-up"></i>Sent</div>
+        </div>
+
+
+        <div class="body ">
+            <div class="body-header">
+                <div class="header-search">
+                    <div class="search-group">
+                        <input id="search-caller" type="text" placeholder="User Search">
+                        <button id="search-btn"><i class="fas fa-search"></i>Search</button>
+                    </div>
+                    <div class="search-group">
+                        <input type="date" name="from-date" id="from-date">
+                        <span>-</span>
+                        <input type="date" name="to-date" id="to-date">
+                        <button id="search-date-btn"><i class="fas fa-search"></i>Search date</button>
+                    </div>
+                </div>
+
+                <div class="header-buttons">
+
+                    <button id="delete" style="background: #f46868;"><i class="fas fa-trash"></i>delete selected message</button>
+
+                    <button id="edit" style="background: #f6ce5f;"><i class="fas fa-cog" ></i>direct message marco management</button>
+
+                    <button id="sent" style="background: #5dbcf0;" class=""><i class="fas fa-paper-plane"></i>sent me a note
+                    </button>
+
+
+                    <div class="popup">
+                        <input type="text" id="number" placeholder="Phone number">
+                        <input type="text" id="name" placeholder="Name">
+                        <textarea id="message" name="" id="" cols="30" rows="2" placeholder="Message"></textarea>
+                        <button id="post">Sent</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+            <table class="header-table active">
+                <tr>
+                    <th></th>
+                    <th>Number</th>
+                    <th>Caller</th>
+                    <th>Contents</th>
+                    <th>Received Date</th>
+                    <th>Confirm Date</th>
+                    <th>Delete</th>
+                    <th>Management</th>
+
+                    
+                </tr>
+            </table>
+
+            <table class="body-table">
+                
+            </table>
+
+            <div class="popup-edit">
+                <input type="text" id="number-new" placeholder="Phone number">
+
+                <input type="text" id="name-new" placeholder="Name">
+
+                <textarea id="message-new" name="" id="" cols="30" rows="2" placeholder="Message"></textarea>
+                <button id="put">Edit</button>
+            </div>
+
+
+            <div class="filter">
+                <input id="num-item" type="number" name="item" id="item" min="1" value="20">
+                <div class="pagination">
+                    <button id="before">before</button>
+                    <div class="pages">
+                        <button>1</button>
+                        <button>2</button>
+                        
+                    </div>
+                    <button id="next">next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- javascript file -->
+    <script src="./app.js"></script>
+</body>
+</html>
